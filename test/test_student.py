@@ -34,10 +34,11 @@ class TestStudent(unittest.TestCase):
 
     def test_object_not_created_error_major(self):
         with self.assertRaises(ValueError):
-            p = student.Student("Morishita", "Elijah", 564, 3.5)
+            p = student.Student("Morishita", "Elijah", 'Coding', 3.5)
 
     def test_object_not_created_error_gpa(self):
-        pass
+        with self.assertRaises(ValueError):
+            p = student.Student("Morishita", "Elijah", 'Coding', 3.5)
 
 if __name__ == '__main__':
     unittest.main()
