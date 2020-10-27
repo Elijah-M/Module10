@@ -32,12 +32,9 @@ class TestStudent(unittest.TestCase):
         with self.assertRaises(ValueError):
             p = student.Student("Morishita", "Elijah", 'Coding', 3.5)
 
-    def test_object_not_created_error_first_name(self):
+    def test_object_not_created_error_major(self):
         with self.assertRaises(ValueError):
             p = student.Student("Morishita", "Elijah", 564, 3.5)
-
-    def test_object_not_created_error_major(self):
-        pass
 
     def test_object_not_created_error_gpa(self):
         pass
