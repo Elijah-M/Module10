@@ -26,14 +26,15 @@ class TestStudent(unittest.TestCase):
 
     def test_object_not_created_error_last_name(self):
         with self.assertRaises(ValueError):
-            p = student.Student("Morishita", "Elijah", 'Coding, 3.5')
+            p = student.Student("Morishita", "Elijah", 'Coding', 3.5)
 
     def test_object_not_created_error_first_name(self):
         with self.assertRaises(ValueError):
-            p = student.Student("Morishita", "Elijah", 'Coding, 3.5')
+            p = student.Student("Morishita", "Elijah", 'Coding', 3.5)
 
     def test_object_not_created_error_first_name(self):
-        pass
+        with self.assertRaises(ValueError):
+            p = student.Student("Morishita", "Elijah", 564, 3.5)
 
     def test_object_not_created_error_major(self):
         pass
