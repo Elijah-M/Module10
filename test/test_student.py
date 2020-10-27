@@ -25,7 +25,8 @@ class TestStudent(unittest.TestCase):
         self.assertEqual(self.student.__str__(), test_string)
 
     def test_object_not_created_error_last_name(self):
-        pass
+        with self.assertRaises(ValueError):
+            p = student.Student(809, "Elijah", 'Coding, 3.5')
 
     def test_object_not_created_error_first_name(self):
         pass
