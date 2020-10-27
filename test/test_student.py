@@ -21,7 +21,8 @@ class TestStudent(unittest.TestCase):
         self.assertEqual(self.student.gpa, 3.5)
 
     def test_student_str(self):
-        pass
+        test_string = str('Morishita' + ", " + 'Elijah' + " has major " + 'Coding' + "with gpa: " + str(3.5))
+        self.assertEqual(self.student.__str__(), test_string)
 
     def test_object_not_created_error_last_name(self):
         pass
