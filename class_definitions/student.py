@@ -16,6 +16,9 @@ class Student:
         if self.major != "Coding":
             raise ValueError
 
+        if self.gpa != 3.5:
+            raise ValueError
+
 
     def __str__(self):
         return self.last_name + ", " + self.first_name + " has major " + self.major + "with gpa: " + str(self.gpa)
